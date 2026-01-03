@@ -1,0 +1,8 @@
+## ⚙️ Configurations des Équipements
+Vous trouverez ci-dessous les fichiers de configuration complets pour chaque nœud du réseau :
+
+* 📂 [Configuration Routeur R1](Config_Files/R1_config.txt)
+* 📂 [Configuration Routeur R2](Config_Files/R2_config.txt)
+* 📂 [Configuration Routeur R3](Config_Files/R3_config.txt)
+* 📂 [Configuration Switch S1](Config_Files/S1_config.txt)
+* 📂 [Configuration Switch S2](Config_Files/S2_config.txt)
