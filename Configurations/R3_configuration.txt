@@ -1,0 +1,15 @@
+! Configuration Backup - Routeur R3 (Site Distant)
+hostname R3
+!
+interface Loopback0
+ description Serveur-Test-Distant
+ ip address 10.0.30.129 255.255.255.255
+!
+interface Serial0/0/0
+ description Link-to-R1
+ ip address 10.0.30.182 255.255.255.252
+ no shutdown
+!
+ip route 172.18.0.0 255.255.0.0 10.0.30.181
+!
+end
