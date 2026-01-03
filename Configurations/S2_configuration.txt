@@ -1,0 +1,16 @@
+! Configuration Backup - Switch S2 (Acces)
+hostname S2
+!
+vlan 10,20,30,50,60
+!
+interface range f0/21-22
+ description Port-Channel-to-S1
+ channel-group 1 mode active
+ switchport mode trunk
+!
+interface vlan 60
+ ip address 172.18.60.2 255.255.255.240
+!
+ip default-gateway 172.18.60.14
+!
+end
