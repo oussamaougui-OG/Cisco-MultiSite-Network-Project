@@ -1,4 +1,4 @@
-# 🏁 Architecture Réseau Multi-Sites : Design & Connectivité WAN
+ Design & Connectivité WAN
 > **Projet Technique :** Conception et déploiement d'une infrastructure Cisco complète.
 
 ![Cisco](https://img.shields.io/badge/Cisco-Packet_Tracer-049fd9?style=for-the-badge&logo=cisco)
@@ -15,7 +15,7 @@ Ce projet consiste en la création d'un réseau d'entreprise interconnectant un 
 
 ## 🏗️ Topologie & Matériel
 L'infrastructure utilise une approche modulaire pour séparer les services et optimiser les performances.
-![Texte Alternatif](chemin/vers/votre/image.png)
+<img src="Images/reseau globale.png" width="850" alt="Test de connectivité">
 ### Inventaire des Équipements
 | Matériel | Quantité | Rôle Stratégique |
 | :--- | :---: | :--- |
@@ -34,7 +34,7 @@ Une planification rigoureuse a été appliquée pour éviter les conflits et fac
 | Périphérique | Interface | Adresse IP / Masque | Description |
 | :--- | :--- | :--- | :--- |
 | **R1** | Fa0/0.10 | 172.18.10.14 /28 | Passerelle VLAN 10 |
-| **R1** | S0/0/0 | 10.0.30.177 /30 | Lien vers R2 (Backbone) |
+| **R1** | S0/0/0 | 10.0.30.177 /30 | Lien vers R2  |
 | **S2** | Vlan 60 | 172.18.60.2 /28 | IP de Management |
 | **R3** | Loopback0 | 10.0.30.129 /32 | Serveur de Test Distant |
 
@@ -45,6 +45,7 @@ Une planification rigoureuse a été appliquée pour éviter les conflits et fac
 ### 1. Commutation de Couche 2 (Switching)
 - **Segmentation VLAN :** Division du réseau en 5 domaines de diffusion (10, 20, 30, 50, 60).
 - **EtherChannel (LACP) :** Agrégation de ports entre S1 et S2 pour doubler la bande passante.
+- <img src="Images/show etherchannel summary.png" width="850" alt="Test de connectivité">
 - **IEEE 802.1Q :** Mise en œuvre de Trunks pour le transport multi-VLAN.
 
 ### 2. Solutions de Routage (Routing)
