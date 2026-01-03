@@ -1,0 +1,44 @@
+! Configuration Backup - Routeur R1 (Cœur de Réseau)
+! Projet: Architecture Reseau - Routage Inter-VLAN & WAN
+hostname R1
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 172.18.10.14 255.255.255.240
+!
+interface FastEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 172.18.20.14 255.255.255.240
+!
+interface FastEthernet0/0.30
+ encapsulation dot1Q 30
+ ip address 172.18.30.14 255.255.255.240
+!
+interface FastEthernet0/0.50
+ encapsulation dot1Q 50 native
+ ip address 172.18.50.14 255.255.255.240
+!
+interface FastEthernet0/0.60
+ encapsulation dot1Q 60
+ ip address 172.18.60.14 255.255.255.240
+!
+interface Serial0/0/0
+ description Link-to-R2
+ ip address 10.0.30.177 255.255.255.252
+ clock rate 2000000
+ no shutdown
+!
+interface Serial0/0/1
+ description Link-to-R3
+ ip address 10.0.30.181 255.255.255.252
+ clock rate 2000000
+ no shutdown
+!
+ip route 10.0.30.129 255.255.255.255 10.0.30.182 
+!
+end
