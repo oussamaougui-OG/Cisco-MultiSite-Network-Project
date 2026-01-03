@@ -1,0 +1,20 @@
+! Configuration Backup - Switch S1 (Distribution)
+hostname S1
+!
+vlan 10,20,30,50,60
+!
+interface range f0/1-10
+ switchport mode access
+ switchport access vlan 10
+!
+interface range f0/21-22
+ description Port-Channel-to-S2
+ channel-group 1 mode active
+ switchport mode trunk
+!
+interface vlan 50
+ ip address 172.18.50.2 255.255.255.240
+!
+ip default-gateway 172.18.50.14
+!
+end
